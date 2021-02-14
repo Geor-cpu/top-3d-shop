@@ -1,0 +1,129 @@
+
+@import "header";
+@import "top-3d-shop";
+@import "better-to-see";
+@import "videos-about-us";
+@import "popup";
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    height: 100%;
+}
+
+.color_red {
+    color: #f00;
+}
+
+.link {
+    cursor: pointer;
+}
+
+.link_bl {
+            cursor: pointer;
+            display: inline-block;
+            color: #000;
+            text-decoration: none;
+
+            &::after {
+                content: '';
+                display: block;
+                width: 0;
+                height: 2px;
+                background: #000;
+                transition: width .3s;
+            }
+
+            &:hover::after {
+                width: 100%;
+                //transition: width .3s;
+            }
+
+        }
+
+.btn {
+    background: #D2001C;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .2s linear;
+    
+    &:hover{
+        box-shadow: 0 0 15px rgba(0,0,0, .75);
+    }
+    
+    &:active, 
+    &:focus {
+        outline: none; 
+    }
+}
+
+
+
+
+@media (max-width: 1000px) {
+
+    html,
+    body {
+        font-size: 8px;
+    }
+
+    
+
+}
+
+
+
+.burger {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    background: #d50101;
+    height: 45px;
+    width: 45px;
+    border-radius: 7px;
+    transition: all .25s linear;
+
+    &__line {
+        position: absolute;
+        background: #fff;
+        width: 85%;
+        height: 5px;
+        border-radius: 10px;
+        right: 7%;
+        transition: all .4s linear;
+    }
+
+    .line1 {
+        top: 13%;
+    }
+
+    .line2 {
+        top: 40%;
+    }
+
+    .line3 {
+        top: 70%;
+    }
+}
+
+.burger_close {
+
+    .line1,
+    .line2 {
+        top: 45%;
+        transform: rotate(45deg);
+    }
+
+    .line3 {
+        top: 45%;
+        transform: rotate(-45deg);
+    }
+}
+
+.goods__item{
+    cursor: pointer;
+}
